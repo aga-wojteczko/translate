@@ -1,6 +1,6 @@
 export default function Translation(){
     return(
-      <div> <input onChange={this.translateText} type="text" placeholder="tłumaczenie" /></div>
+      <div> <input onChange={translateText} type="text" placeholder="tłumaczenie" /></div>
       )
    };
    const translateText = () => {
