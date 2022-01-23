@@ -9,11 +9,11 @@ export default function Translate() {
   
   const text = 'Hello';
   const targetLang = 'PL';
-  const api_key = process.env.API_KEY;
+  const apiKey = process.env.API_KEY;
 
   useEffect(() => {
     setLoading(true)
-    fetch(`https://api-free.deepl.com/v2/translate?auth_key=${api_key}&text=${text}&target_lang=${targetLang}`)
+    fetch(`https://api-free.deepl.com/v2/translate?auth_key=${apiKey}&text=${text}&target_lang=${targetLang}`)
       .then((res) => res.json())
       .then((data) => {
         setData(data)
