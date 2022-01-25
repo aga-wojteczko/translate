@@ -4,11 +4,11 @@
 import { useTranslation } from '../utils/useTranslation';
 
 export default function Translate() {
-  // const [data, setData] = useState(null)
+   const [data, setData] = useState(null) //because I've left the part responsible for the response to the change
   // const [isLoading, setLoading] = useState(false)
   
-  const text = 'Hello';
-  const targetLang = 'PL';
+  const text = 'Hello'; //input data, we can change
+  const targetLang = 'PL'; //input data, we can change
   // const apiKey = process.env.API_KEY;
 
   // useEffect(() => {
