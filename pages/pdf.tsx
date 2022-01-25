@@ -1,8 +1,16 @@
+import React, { useEffect, useRef } from 'react';
+import WebViewer from '@pdftron\webviewer';
+
+// need to use PDFviewer - already installed
+
 export default function ViewPDF () {
-    // need to use PDFviewer - already installed
+  useEffect(()=> {
+    WebViever({path:'lib' initialDoc: '..\.next\static\pdfs\PAC 30 02.pdf'}
+  }, [])
+    const viewerDiv = useRef<HTMLDivElement>(null);
     return (
-      <div>
-      <a href='C:\Users\Agnieszka\Documents\AGH\Rozprawa\Publikacje\PAC 30 02.pdf'></a>
+      <div className = 'webviewer' ref = {viewerDiv}>
+    
       </div> 
     )
     }
