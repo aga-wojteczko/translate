@@ -28,6 +28,7 @@ export default function Translate() {
   return (
     <div>
       <TextInput onChange={() => console.log('on change handler')} />
+      <input type="submit" value="Translate"/> 
     </div>
   )
 }
