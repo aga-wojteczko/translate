@@ -7,7 +7,7 @@ export default function Translate() {
    const [data, setData] = useState(null) //because I've left the part responsible for the response to the change
   const [isLoading, setLoading] = useState(false)
   
-  const text = 'Hello'; //input data, we can change
+  const [text, setText] = useState(''); //input data, we can change
   const targetLang = 'PL'; //input data, we can change
   // const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 
@@ -27,7 +27,7 @@ export default function Translate() {
   console.log('data:', data)
   return (
     <div>
-      <TextInput onChange={() => console.log('on change handler')} />
+      <TextInput onChange={newText => setText(newText)} defaultValue={text} />
       <input type="submit" value="Translate"/> 
     </div>
   )
