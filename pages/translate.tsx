@@ -25,10 +25,14 @@ export default function Translate() {
   if (!data) return <p>No data</p>
 
   console.log('data:', data)
+  const handleClick = () => {
+    //here we should have fetch
+    console.log('click', text)
+  }
   return (
     <div>
-      <TextInput onChange={newText => setText(newText)} defaultValue={text} />
-      <input type="submit" value="Translate"/> 
+      <TextInput onChange={event => setText(event.target.value)} defaultValue={text} /> 
+      <button onClick={handleClick}>translate</button>
     </div>
   )
 }
